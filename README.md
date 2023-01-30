@@ -12,3 +12,22 @@ y [Spring Boot <code><img width="2%" src="https://www.vectorlogo.zone/logos/spri
 [Enlace Tests en GitHub Actions](https://github.com/JohamSMC)
 
 ##  :one: Pasos para ejecutar la Aplipación :page_facing_up:
+
+
+### Primer paso:
+Crear jar del proyecto:
+```
+mvn clean package
+```
+
+### Segundo paso:
+Crear imagen docker del proyecto:
+```
+docker build -t spring-app:v1 .
+```
+
+### Tercer paso:
+Correr contenedor docker con la imagen generada en el paso 2:
+```
+docker run -p 9090:9090 spring-test:v1
+```
